@@ -166,7 +166,6 @@ fun SwipeDismissImageItem(
     )
 }
 
-
 @Composable
 fun SwipeForeground(
     imageUrl: String,

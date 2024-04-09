@@ -77,8 +77,6 @@ fun ListDogImages(
     }
 }
 
-
-
 @Preview(showBackground = true)
 @Composable
 fun ListDogImagesPreview() {

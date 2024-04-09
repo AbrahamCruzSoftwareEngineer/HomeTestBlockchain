@@ -18,7 +18,9 @@ import com.example.hometestblockchain.ui.composables.ListDogImages
 import com.example.hometestblockchain.ui.theme.HomeTestBlockchainTheme
 import com.example.hometestblockchain.ui.viewmodel.MyViewModel
 import com.example.hometestblockchain.ui.viewmodel.MyViewModel.Companion.DEFAULT_VALUE
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     private val viewModel: MyViewModel by viewModels()
 
