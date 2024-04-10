@@ -44,8 +44,23 @@ class MyViewModel @Inject constructor(
         _isLoading.value = true
         viewModelScope.launch(Dispatchers.IO) {
             try {
-                repository.fetchImagesFromApi(query)
+                repository.fetchImagesFromApiLimited("$query/images")
                 _isLoading.value = false
+                Log.d(TAG, "searchByName: ${repository.allImages}")
+            } catch (e: Exception) {
+                Log.e(TAG, "searchByName: ${e.message}")
+                _isLoading.value = false
+            }
+        }
+    }
+
+    fun searchByName(query: String) {
+        _isLoading.value = true
+        viewModelScope.launch(Dispatchers.IO) {
+            try {
+                repository.fetchImagesFromApi("$query/images")
+                _isLoading.value = false
+                Log.d(TAG, "searchByName: ${repository.allImages}")
             } catch (e: Exception) {
                 Log.e(TAG, "searchByName: ${e.message}")
                 _isLoading.value = false

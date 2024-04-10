@@ -50,7 +50,7 @@ class MainActivity : ComponentActivity() {
                     title = DEFAULT_VALUE,
                     imageUrls = imageUrls,
                     onTitleChange = { newTitle -> viewModel.searchByNameLimited(newTitle) },
-                    onReloadClick = { newTitle -> viewModel.searchByNameLimited(newTitle) }
+                    onReloadClick = { newTitle -> viewModel.searchByName(newTitle) }
                 )
             }
         }
